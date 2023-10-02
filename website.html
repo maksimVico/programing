@@ -7,12 +7,11 @@
 </head>
 <body>
     <header>
-        <h1>To create web site you must be the profesional
-        programmer to create it</h1>
+        <h1>Making web site is hard</h1>
     </header>
     <main>
         <section>
-            <h2>First step</h2>
+            <h1>First step</h1>
             <p>Open sublime text its best option 
             DIRECTED BY MAKSIM VICO</p>
             <h2>Second step</h2>
@@ -115,6 +114,76 @@
         function changeBackgroundColor() {
             document.body.style.backgroundImage = "none"; // Disable the rainbow background
             document.body.style.backgroundColor = "blue"; // Set a solid blue background
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Background Button</title>
+    <style>
+        /* Default rainbow background animation */
+        body {
+            animation: rainbowBackground 8s linear infinite;
+            background-size: 400% 400%;
+        }
+
+        /* Blue background button styles */
+        .blue-bg-button {
+            position: fixed;
+            top: 120px; /* Adjust the top position to your preference */
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Custom background color button styles */
+        .custom-bg-button {
+            position: fixed;
+            top: 170px; /* Adjust the top position to your preference */
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        @keyframes rainbowBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="blue-bg-button" onclick="changeBackgroundColor('blue')">Blue Background</button>
+    <button class="custom-bg-button" onclick="changeCustomBackgroundColor()">Custom Background</button>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundImage = "none"; // Disable the rainbow background
+            document.body.style.backgroundColor = color;
+        }
+
+        function changeCustomBackgroundColor() {
+            var customColor = prompt("Enter a custom background color (e.g., 'red', '#ff9900'):");
+
+            if (customColor !== null && customColor.trim() !== "") {
+                document.body.style.backgroundImage = "none"; // Disable the rainbow background
+                document.body.style.backgroundColor = customColor;
+            }
         }
     </script>
 </body>
