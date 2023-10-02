@@ -72,4 +72,50 @@
     </script>
 </body>
 </html>
-<button class="blue-bg-button" onclick="changeBackgroundColor()">Blue Background</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Background Button</title>
+    <style>
+        /* Rainbow background animation */
+        body {
+            animation: rainbowBackground 8s linear infinite;
+            background-size: 400% 400%;
+        }
+
+        /* Blue background button styles */
+        .blue-bg-button {
+            position: fixed;
+            top: 120px; /* Adjust the top position to your preference */
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        @keyframes rainbowBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="blue-bg-button" onclick="changeBackgroundColor()">Blue Background</button>
+
+    <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundImage = "none"; // Disable the rainbow background
+            document.body.style.backgroundColor = "blue"; // Set a solid blue background
+        }
+    </script>
+</body>
+</html>
